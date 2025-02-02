@@ -11,7 +11,7 @@ class CheckIfLoggedIn
     public function handle(Request $request, Closure $next)
     {
         if (!Auth::check()) {
-            return response()->json(['message' => 'Not logged in'], 401);
+            return response()->json(['message' => 'No logeado'], 401);
         }
 
         return $next($request);
